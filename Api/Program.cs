@@ -1,3 +1,4 @@
+using Core.Data;
 using Core.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,7 +10,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//dummy data
+builder.Services.AddSingleton<Teams>();
+
+//services
 builder.Services.AddScoped<TestService>();
+builder.Services.AddScoped<TeamsService>();
 
 var app = builder.Build();
 
