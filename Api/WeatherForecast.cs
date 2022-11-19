@@ -1,4 +1,4 @@
-namespace f1_predictions_backend
+namespace Api
 {
     public class WeatherForecast
     {
